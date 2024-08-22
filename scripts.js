@@ -65,6 +65,7 @@ function updateGridSize() {
     const size = sizeSlider.value;
     gridSizeLabel.textContent = size;
     createGrid(size);
+    gridlines();
 }
 createGrid(sizeSlider.value);
 sizeSlider.addEventListener("input", updateGridSize);
@@ -100,5 +101,49 @@ function background(){
 }
 backgroundButton.addEventListener("click", background);
 
+const gridlinesButton = document.querySelector("#gridlines");
+function gridlines(){
+    const cells = document.querySelectorAll(".cell");
 
+    cells.forEach(cell => {
+       cell.classList.toggle("gridline");
+    });
 
+    backgroundColor = colorPicker.value;
+}
+gridlinesButton.addEventListener("click", gridlines);
+
+const clearButton = document.querySelector("#clear");
+function clear(){
+    const cells = document.querySelectorAll(".cell");
+
+    cells.forEach(cell => {
+       cell.style.backgroundColor = "white";
+    });
+
+    backgroundColor = "white";
+    colorPicker.value = "black";
+
+    penButton.click();
+}
+clearButton.addEventListener("click", clear);
+
+const buttons = document.querySelectorAll(".menuLeft > button");
+
+function activateButton(buttonToActivate){
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    buttonToActivate.classList.add("active")
+}
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        activateButton(button);
+    });
+});
+
+colorPicker.addEventListener("input", (event) => {
+    currentColor = event.target.value;
+});
+
+gridlines();

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Etch-A-Sketch</title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="scripts.js" defer></script>
-    </head>
-
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div class="content">
         <h1 id="title">Etch-A-Sketch</h1>
 
         <div class="drawingArea">
@@ -17,8 +16,6 @@
                 <button id="erase">Erase</button>
                 <button id="rainbow">Rainbow</button>
                 <button id="background">Background</button>
-                <button id="shade">Shade</button>
-                <button id="lighten">Lighten</button>
                 <button id="gridlines">Gridlines</button>
                 <button id="clear">Clear</button>
             </div>
@@ -31,5 +28,10 @@
                 <label for="sizeSlider">Grid Size: <span id="gridSize">16</span></label>
             </div>
         </div>
-    </body>
+    </div>
+
+    <footer class="footer">
+        <div class="credits">Mike Rubio | CashierDuck</div>
+    </footer>
+</body>
 </html>

@@ -3,8 +3,7 @@
     src: url(fonts/Outfit-Regular.ttf);
 }
 
-*{
-    background-color: rgb(30, 30, 30);
+* {
     color: white;
     font-family: outfit;
     padding: 0;
@@ -14,7 +13,7 @@
 #title {
     text-align: center;
     font-size: 50px;
-    margin-top: 16px;
+    margin-top: -100px;
     margin-bottom: 48px;
 }
 
@@ -38,6 +37,7 @@
     width: 125px;
     border-radius: 20px;
     box-sizing: content-box;
+    background-color: rgb(30, 30, 30);
 }
 
 .drawingArea{
@@ -78,4 +78,42 @@
     height: var(--cell-size);
     width: var(--cell-size);
     box-sizing: border-box;
+}
+
+.gridline {
+    border: 1px solid black;
+}
+
+.menuLeft > button.active {
+    border: solid rgb(71, 1, 210);
+    color: rgb(71, 1, 210);
+}
+
+.content {
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(30, 30, 30);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(20, 20, 20);
+    color: white;
 }
