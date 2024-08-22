@@ -1,0 +1,81 @@
+@font-face {
+    font-family: outfit;
+    src: url(fonts/Outfit-Regular.ttf);
+}
+
+*{
+    background-color: rgb(30, 30, 30);
+    color: white;
+    font-family: outfit;
+    padding: 0;
+    margin: 0;
+}
+
+#title {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+.menuLeft {
+    display: flex;
+    flex-direction: column;
+    width: 75px;
+    margin: 24px;
+    gap: 10px;
+}
+
+.menuLeft > button:hover {
+    background-color: #555;
+}
+
+.menuLeft > button{
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid white;
+    height: 35px;
+    width: 125px;
+    border-radius: 20px;
+    box-sizing: content-box;
+}
+
+.drawingArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.menuRight {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap:10px;
+}
+
+#colorPicker{
+    width: 150px;
+    height: 150px;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    border: 4px solid black;
+    --cell-size: calc(100%/16);
+    flex-shrink: 0;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+}
+
+.cell {
+    background-color: white;
+    flex: 0 0 var(--cell-size);
+    height: var(--cell-size);
+    width: var(--cell-size);
+    box-sizing: border-box;
+}
